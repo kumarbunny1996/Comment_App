@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const ForgotPwd = () => {
   return (
-    <div className="min-h-full flex justify-center items-center">
+    <div className="min-h-screen flex justify-center items-center">
       <div className="w-[20%]">
         <h1 className="text-white text-center font-bold text-xl pb-2 border-b-2 border-solid border-white">
           Forgot Pasword

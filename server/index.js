@@ -1,14 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const router = require("./routes/mainRouter");
+const init = require("./routes/mainRouter");
 const { DB_CONNECTION_URL } = require("./utils/env");
 
 const app = express();
-app.use(router);
+init(app);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Server is listening at ${PORT}`));
 
+mongoose.set("debug", true);
 mongoose.connect(
   DB_CONNECTION_URL,
   {
